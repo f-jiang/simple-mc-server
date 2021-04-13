@@ -1,0 +1,13 @@
+name: mc-server
+root: $REPO_PATH
+
+pre_window: source "$REPO_PATH/env.sh"
+on_project_stop: docker stop "$CONTAINER_NAME"
+startup_window: admin
+
+windows:
+    - logs: while [[ 1 ]]; do docker logs -f "$CONTAINER_NAME"; done
+    - rcon: while [[ 1 ]]; do docker exec -i "$CONTAINER_NAME" rcon-cli; done
+    - htop: htop
+    - admin: '"$REPO_PATH/server.sh" start'
+
