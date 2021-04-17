@@ -2,7 +2,7 @@ name: mc-server
 root: $REPO_PATH
 
 pre_window: source "$REPO_PATH/env.sh"
-on_project_stop: docker stop "$CONTAINER_NAME"
+on_project_stop: '"$REPO_PATH/server.sh" stop'
 startup_window: admin
 
 windows:
