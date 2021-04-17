@@ -13,3 +13,8 @@ export PYTHON=python3
 export DRIVE=drive
 export MC_OVERVIEWER=corge
 
+cd "$REPO_PATH"
+for file in mc-server.yml render.config; do
+    (envsubst < $file) > tmp && mv tmp $file
+done
+
