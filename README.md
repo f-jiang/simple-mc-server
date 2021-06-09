@@ -5,7 +5,7 @@
 3. Install [drive](https://github.com/odeke-em/drive#installing)
 4. Install tmux and [tmuxinator](https://github.com/tmuxinator/tmuxinator#installation)
 5. Install Minecraft Overviewer ([install](http://docs.overviewer.org/en/latest/installing/#) or [build from source](http://docs.overviewer.org/en/latest/building/))
-6. Fill in values in `env.sh`, then `source` it.
+6. Fill in values in `env.sh`, then `source` it. Also fill in values for `mc-env.list`.
 7. Link `mc-server.yml` to make it visible to tmuxinator:
 
 ```
